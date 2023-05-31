@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activitys.MainActivity"
+    android:background="@color/backgroundColor">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <TextView
+            android:id="@+id/custom_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="30sp"
+            android:textColor="@color/textColor"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_name"
+        android:layout_marginLeft="15dp">
+        <ImageButton
+            android:id="@+id/datePickButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="0dp"
+            android:src="@drawable/calendar24"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/round_button" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/control_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_below="@+id/app_name"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp">
+
+        <Button
+            android:id="@+id/previousDateButton"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            android:text="-"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="22.22.2222"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/textColor"/>
+
+        <Button
+            android:id="@+id/nextDateButton"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            android:text="+"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/control_panel"
+        app:tabMode="scrollable"
+        android:background="@color/backgroundColor">
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/backgroundColorVariant"
+        android:layout_below="@id/tab_layout"/>
+
+    <LinearLayout
+        android:id="@+id/scr_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/tab_layout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/dayNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/creatinine"
+                android:layout_marginStart="5dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/hintColor"
+                android:layout_marginBottom="0dp"/>
+
+            <EditText
+                android:id="@+id/editTextScr"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/enter_values"
+                android:inputType="numberDecimal"
+                android:autofillHints=""
+                android:paddingLeft="15dp"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/hintColor"
+                android:background="@drawable/round_enter_data_pane"/>
+
+            <TextView
+                android:id="@+id/validationError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/validationError"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/errorColor"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/gestational_age"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/textColor"/>
+
+            <TextView
+                android:id="@+id/gestation_result"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/textColor"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/date_of_birth"
+                android:textSize="14sp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/textColor"/>
+
+            <TextView
+                android:id="@+id/birthday_result"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="14sp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/textColor"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/minimum_value"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/textColor"/>
+
+            <TextView
+                android:id="@+id/SCR_min_result"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="0.0 мкмоль/л"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/textColor"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/maximum_value"
+                android:textSize="14sp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/textColor"/>
+
+            <TextView
+                android:id="@+id/SCR_max_result"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="0.0 мкмоль/л"
+                android:textSize="14sp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/textColor"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/max_divide_min"
+                android:textSize="14sp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/textColor"/>
+
+            <TextView
+                android:id="@+id/SCR_result"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="0.0 мкмоль/л"
+                android:textSize="14sp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/textColor"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/reference_max_divide_min"
+                android:textSize="14sp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/textColor"/>
+
+            <TextView
+                android:id="@+id/SCR_average_difference"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="0.0 мкмоль/л"
+                android:textSize="14sp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/textColor"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/conclusion_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/conclusion"
+                android:textSize="14sp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="15dp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textColor="@color/textColor"/>
+
+            <TextView
+                android:id="@+id/SCR_conclusion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="без ОПП"
+                android:textSize="14sp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="15dp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textColor="@color/textColor"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/scr_layout"
+        android:id="@+id/graph"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/graph">
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottom_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom"
+            app:backgroundTint="@color/backgroundColor"
+            app:fabAlignmentMode="center"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Organizer</string>
+    <string name="gestational_age">Gestational age:</string>
+    <string name="date_of_birth">Date of Birth:</string>
+    <string name="minimum_value">Min. value:</string>
+    <string name="maximum_value">Max. value:</string>
+    <string name="max_divide_min">Max./min.:</string>
+    <string name="reference_max_divide_min">Reference max./min.:</string>
+    <string name="conclusion">Conclusion:</string>
+    <string name="enter_values">Enter value</string>
+    <string name="creatinine">Creatinine</string>
+    <string name="unit_name">µmol/l</string>
+    <string name="stage">Stage</string>
+    <string name="settings">Additional option</string>
+    <string name="stages_view">View stages</string>
+    <string name="see_odds">View ratios</string>
+    <string name="back">Back</string>
+    <string name="enter_data">Enter the data</string>
+    <string name="name">Name</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="coefficients">Ratios</string>
+    <string name="deleting_patient">Patient removal</string>
+    <string name="yes">Да</string>
+    <string name="delete_text">Are you sure you want to remove the current patient?</string>
+    <string name="stages">Stages</string>
+    <string name="action">Action</string>
+    <string name="add_patients">Add new patient</string>
+    <string name="delete_patient">Remove the current patient</string>
+    <string name="export_patient">Export current patient</string>
+    <string name="success_patient_import">Patient import successfully completed</string>
+    <string name="success_ratio_import">Ratio import successfully completed</string>
+    <string name="success_stages_import">Stage import successfully completed</string>
+    <string name="week">week(s)</string>
+    <string name="entered_correctly">Make sure the data is entered correctly!</string>
+    <string name="the_patient_is_healthy">The patient is healthy</string>
+    <string name="insufficient_data">Insufficient data</string>
+    <string name="permission_not_granted">No access rights were granted for actions performed</string>
+    <string name="having_aki">AKI</string>
+    <string name="fill_in_all_data">Fill in all data!</string>
+    <string name="relation_to_original_value">Relation to original value</string>
+    <string name="creatinine_level">Creatinine level</string>
+    <string name="unit">Unit</string>
+    <string name="replacement_therapy">Replacement therapy</string>
+    <string name="validationError">Entered incorrect value</string>
+</resources>

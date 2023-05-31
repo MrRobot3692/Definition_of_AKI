@@ -1,0 +1,440 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "com.example.definitionofakithesis.activitys.MainActivity",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1322970774 { 
+   	label=example
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1704043613 { 
+   	label=definitionofakithesis
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   BottomMenuFragment1587070053[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)BottomMenuFragment</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   activity: MainActivity [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   view: View [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >- handleDat()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle): View</TD></TR>
+<TR><TD ALIGN="LEFT" >+ onRequestPermissionsResult(requestCode: int, permissions: String[], grantResults: int[])</TD></TR>
+<TR><TD ALIGN="LEFT" >+ onStart()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ requestMultiplePermissions()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Classification1679202669[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Classification</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   strategy: ClassificationStrategy [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ classify(SC0: double, SC1: double): int</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Coefficients1864353899[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Coefficients</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   AKI: boolean [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   C0: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   G: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   Gk: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   Td: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   gestation: Integer [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+CoefficientsTableFragment1587070053[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)CoefficientsTableFragment</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   activity: MainActivity [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   view: View [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle): View</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+ConfirmFragment1587070053[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)ConfirmFragment</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   activity: MainActivity [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   cancelButton: Button [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   confirmButton: Button [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   view: View [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle): View</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+DateTimeWork588194992[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)DateTimeWork</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ calendarToString(calendar: Calendar): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ dateToString(date: Date): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ stringToDate(aDate: String): Date</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+DbHelper549513604[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)DbHelper</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >- fillDb(db: SQLiteDatabase)</TD></TR>
+<TR><TD ALIGN="LEFT" >- insertToCoefficient(db: SQLiteDatabase, gestation: Integer, G: double, Td: double, C0: double, Gk: double, AKI: Integer)</TD></TR>
+<TR><TD ALIGN="LEFT" >- insertToStages(db: SQLiteDatabase, ratio: double, stage: String, increase: double, unit: String, renalTherapy: Integer)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ onCreate(db: SQLiteDatabase)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ onDowngrade(db: SQLiteDatabase, oldVersion: int, newVersion: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ onUpgrade(db: SQLiteDatabase, oldVersion: int, newVersion: int)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+DbManager549513604[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)DbManager</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   context: Context [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   db: SQLiteDatabase [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   myDbHelper: DbHelper [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ closeDb()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ deleteFromPatientsDb(db: SQLiteDatabase, patient: Integer)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ deleteFromResultsDb(db: SQLiteDatabase, patient: Integer, date: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ insertToCoefficient(db: SQLiteDatabase, gestation: Integer, G: double, Td: double, C0: double, Gk: double, AKI: Integer)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ insertToPatientsDb(db: SQLiteDatabase, name: String, gestation: Integer, date: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ insertToResultsDb(db: SQLiteDatabase, aki: Float, date: String, patient: Integer)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ insertToStages(db: SQLiteDatabase, ratio: double, stage: String, increase: double, unit: String, renalTherapy: Integer)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ openDb()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ readCoefficientDatabase(db: SQLiteDatabase): List&lt;Coefficients&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >+ readPatientDatabase(db: SQLiteDatabase): List&lt;Patients&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >+ readStagesDatabase(db: SQLiteDatabase): List&lt;Stages&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >+ rewriteCoefficientDatabase(db: SQLiteDatabase, coefficientsList: List&lt;Coefficients&gt;)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ rewriteStagesDatabase(db: SQLiteDatabase, stagesList: List&lt;Stages&gt;)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ updateResultsDb(db: SQLiteDatabase, scr: Float, date: String, patient: Integer)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+DefaultValidationStrategy202845983[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)DefaultValidationStrategy</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ validate(data: Float): boolean</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+FileWork588194992[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)FileWork</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   context: Context [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ detectDataType(intent: Intent): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ exportPatient(patient: Patients)</TD></TR>
+<TR><TD ALIGN="LEFT" ># getDoubleCell(row: Row, c: int, formulaEvaluator: FormulaEvaluator): double</TD></TR>
+<TR><TD ALIGN="LEFT" ># getStringCell(row: Row, c: int, formulaEvaluator: FormulaEvaluator): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ importPatient(intent: Intent): Patients</TD></TR>
+<TR><TD ALIGN="LEFT" >+ parseCoefficientsExcel(intent: Intent): ArrayList&lt;Coefficients&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >+ parseStagesExcel(intent: Intent): ArrayList&lt;Stages&gt;</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+GraphWork588194992[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)GraphWork</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   C0: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   G: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   Gk: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   Td: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   graphView: GraphView [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ drawPatientGraph(patients: Patients, graphLength: long): LineGraphSeries&lt;DataPoint&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >+ drawReferenceGraph(coefficientsList: List&lt;Coefficients&gt;, patients: Patients, graphLength: long, AKI: boolean): LineGraphSeries&lt;DataPoint&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >- f(t: double, Td: double, G: double, C0: double, Gk: double): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ get7Days(resultsList: List&lt;Results&gt;): List&lt;Float&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getReference7Days(patients: Patients): List&lt;Float&gt;</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+MainActivity1410452358[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)MainActivity</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+   coefficientsList: List&lt;Coefficients&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   currentTab: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   graphView: GraphView [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   graphWork: GraphWork [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   myDbManager: DbManager [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   patientsList: List&lt;Patients&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   stagesList: List&lt;Stages&gt; [0..*]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >- checkScrValid(): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >- datePick()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ deletePatientFromDb()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ deleteResultFromDb()</TD></TR>
+<TR><TD ALIGN="LEFT" >- determinateAKI()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ fillTabLayout()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ initialize()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ insertPatientInDb(patients: Patients)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ insertResultInDb(scr: float, patientId: int, date: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >- liquidityDate(): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >- nextDate()</TD></TR>
+<TR><TD ALIGN="LEFT" ># onCreate(savedInstanceState: Bundle)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ onCreateOptionsMenu(menu: Menu): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" ># onDestroy()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ onOptionsItemSelected(item: MenuItem): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >- previousDate()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ updateResultInDb(scr: float)</TD></TR>
+<TR><TD ALIGN="LEFT" >- updateResultsData(min: float, max: float, result: String, referenceResult: String, conclusion: String)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+NewClassificationStrategy1679202669[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)NewClassificationStrategy</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   stagesArrayList: List&lt;Stages&gt; [0..*]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ classify(SC0: double, SC1: double): int</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Patients1864353899[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Patients</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   birthday: Date [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   gestation: Integer [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   id: Integer [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   name: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   resultList: List&lt;Results&gt; [0..*]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ addResultToLust(results: Results)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Results1864353899[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Results</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   date: Date [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   scr: Float [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Stages1864353899[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Stages</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   levelIncrease: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   ratio: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   renalTherapyRequired: boolean [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   stage: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   unit: String [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Validation202845983[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Validation</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   strategy: DefaultValidationStrategy [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ validate(data: Float): boolean</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+} 
+
+'edges    
+BottomMenuFragment1587070053 -> MainActivity1410452358[label="activity
+[0..1]"];
+Classification1679202669 -> NewClassificationStrategy1679202669[arrowhead=none];
+CoefficientsTableFragment1587070053 -> MainActivity1410452358[label="activity
+[0..1]"];
+ConfirmFragment1587070053 -> MainActivity1410452358[label="activity
+[0..1]"];
+DbManager549513604 -> DbHelper549513604[label="myDbHelper
+[0..1]"];
+DbManager549513604 -> Patients1864353899[label="readPatientDatabase() -> addResultToLust()"];
+GraphWork588194992 -> DateTimeWork588194992[label="drawPatientGraph() -> stringToDate()"];
+MainActivity1410452358 -> Classification1679202669[label="determinateAKI() -> classify()"];
+MainActivity1410452358 -> Coefficients1864353899[label="coefficientsList
+[0..*]"];
+MainActivity1410452358 -> DbManager549513604[label="myDbManager
+[0..1]"];
+MainActivity1410452358 -> GraphWork588194992[label="graphWork
+[0..1]"];
+MainActivity1410452358 -> Patients1864353899[label="patientsList
+[0..*]"];
+MainActivity1410452358 -> Stages1864353899[label="stagesList
+[0..*]"];
+MainActivity1410452358 -> Validation202845983[label="checkScrValid() -> validate()"];
+NewClassificationStrategy1679202669 -> Stages1864353899[label="stagesArrayList
+[0..*]"];
+Patients1864353899 -> Results1864353899[label="resultList
+[0..*]"];
+Validation202845983 -> DefaultValidationStrategy202845983[label="strategy
+[0..1]"];
+    
+}
+@enduml

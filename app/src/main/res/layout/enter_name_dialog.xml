@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingTop="30dp"
+    android:paddingBottom="30dp"
+    android:gravity="center_vertical"
+    android:background="@color/backgroundColor">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_data"
+        android:textSize="20sp"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/textColor"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:textColor="@color/hintColor"
+        android:layout_marginLeft="4dp"/>
+    <EditText
+        android:id="@+id/enter_patient_name_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="15dp"
+        android:inputType="text"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/hintColor"
+        android:background="@drawable/round_enter_data_pane"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gestational_age"
+        android:textColor="@color/hintColor"
+        android:layout_marginLeft="4dp"/>
+
+    <Spinner
+        android:id="@+id/spinner_patient_gestation"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="15dp"
+        android:paddingLeft="15dp"
+        android:textColor="@color/hintColor"
+        android:textSize="18dp"
+        android:background="@drawable/round_enter_data_pane"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date_of_birth"
+        android:textColor="@color/hintColor"
+        android:layout_marginLeft="4dp"/>
+    <LinearLayout
+        android:id="@+id/date_pick_button"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/round_enter_data_pane">
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/calendar24"
+            android:background="@drawable/round_button"
+            android:clickable="false"/>
+        <TextView
+            android:id="@+id/enter_patient_birthday"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:textSize="18dp"
+            android:text="1.1.1990"
+            android:gravity="center_vertical"
+            android:textColor="@color/textColor"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <Button
+            android:id="@+id/yes_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"
+            tools:ignore="MissingConstraints"
+            android:textColor="@color/white"
+            android:layout_marginBottom="5dp"/>
+        <Button
+            android:id="@+id/no_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

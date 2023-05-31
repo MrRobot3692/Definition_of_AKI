@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingTop="30dp"
+    android:paddingBottom="30dp"
+    android:gravity="center_vertical"
+    android:background="@color/backgroundColor">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/deleting_patient"
+        android:textSize="20sp"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/textColor"/>
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/delete_text"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/textColor"/>
+    <Button
+        android:id="@+id/confirm_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/yes"
+        tools:ignore="MissingConstraints"
+        android:textColor="@color/white"
+        android:layout_marginBottom="5dp"/>
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/optionItem"
+        android:title="@string/settings"
+        android:icon="@drawable/settings"
+        app:showAsAction="always"/>
+    <item android:id="@+id/actionItem"
+        android:title="@string/action"
+        app:showAsAction="always"
+        android:icon="@drawable/edit_2"
+        android:iconTint="@color/textColor"/>
+</menu>
